@@ -61,16 +61,16 @@ class Part1Test extends AnyWordSpec with Matchers {
       sortStrByCharQuantity("aaa") shouldEqual "aaa"
     }
 
-    "abc equals to abc or bca or cba" in {
+    "abc transforms to abc or bca or cba" in {
       List("abc", "cba", "bac").contains(sortStrByCharQuantity("abc")) shouldEqual true
     }
 
-    "abbccc equals cccbba" in {
+    "abbccc transforms to cccbba" in {
       sortStrByCharQuantity("abbccc") shouldEqual "cccbba"
 
     }
 
-    s"asdasdaaaweqbbbbasdasd equals one of ${complexTestCases.mkString(",")} " in {
+    s"asdasdaaaweqbbbbasdasd transforms to one of ${complexTestCases.mkString(",")} " in {
       complexTestCases.contains(sortStrByCharQuantity("asdasdaaaweqbbbbasdasd")) shouldEqual true
     }
   }
