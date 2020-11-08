@@ -1,9 +1,10 @@
 import org.scalatest.wordspec.AnyWordSpec
 import Part2._
 import Part2.TreeNode._
+import org.scalatest.matchers.should.Matchers
 
 
-class Part2Test extends AnyWordSpec {
+class Part2Test extends AnyWordSpec with Matchers {
 
   /*
   *           1
@@ -69,15 +70,15 @@ class Part2Test extends AnyWordSpec {
   "Tree equality" should {
 
     "tree equals itself" in {
-      isSameTree(tree1, tree1) equals true
+      isSameTree(tree1, tree1) shouldEqual  true
     }
 
     "trees with different roots are not equal" in {
-      isSameTree(tree1, tree2) equals false
+      isSameTree(tree1, tree2) shouldEqual false
     }
 
     "trees with different leaves are not equal" in {
-      isSameTree(tree1, tree3) equals false
+      isSameTree(tree1, tree3) shouldEqual false
     }
 
 
