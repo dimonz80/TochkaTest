@@ -54,7 +54,7 @@ class Part1Test extends AnyWordSpec with Matchers {
   "Sorting string by char amount" should {
 
     "empty string equals empty string" in {
-      sortStrByCharQuantity("") equals ""
+      sortStrByCharQuantity("") shouldEqual ""
     }
 
     "string  equals itself if contains same char" in {
